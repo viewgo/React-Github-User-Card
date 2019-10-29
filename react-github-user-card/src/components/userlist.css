@@ -1,0 +1,7 @@
+.user-list{
+    border: 1px solid red;
+
+    display: flex;
+    flex-flow: row wrap;
+}
+

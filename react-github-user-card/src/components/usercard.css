@@ -1,0 +1,37 @@
+/* .user-card {
+  padding: 15px;
+
+  display: flex;
+  flex-flow: row nowrap;
+  background-color: #263859;
+
+  border: 1px solid #ff6768;
+
+}
+
+.user-avatar {
+  position: relative;
+  display: block;
+  height: 150px;
+  width: 150px;
+}
+img {
+  width: 150px;
+}
+.user-avatar p {
+  position: absolute;
+  display: block;
+  bottom: 0;
+  background-color: #000000aa;
+  width: 100%;
+}
+
+.user-info {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+p {
+  margin: 0;
+} */
