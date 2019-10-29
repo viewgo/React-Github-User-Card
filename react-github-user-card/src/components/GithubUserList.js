@@ -14,12 +14,15 @@ class GithubUserList extends React.Component {
   }
 
   render() {
+
+    if(typeof this.props.users !== 'undefined'){
+      console.log("GithubUserList props: ", this.props.name);
     return (
       <>
         <div className="user-list">
           <Grid container>
             {this.props.users.map((element, index) => {
-              if (element.name.toLowerCase().includes(this.props.search.toLowerCase())) {
+              if (element.name && element.name.toLowerCase().includes(this.props.search.toLowerCase())) {
                 return (
                   <Grid key={index} item xs>
                     <GithubUser key={element.id} user={element} />
@@ -31,6 +34,13 @@ class GithubUserList extends React.Component {
         </div>
       </>
     );
+          }
+    else{
+      return(
+        <h1>Loading...</h1>
+      )
+
+    }
   }
 }
 

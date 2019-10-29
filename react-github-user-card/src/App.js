@@ -123,22 +123,22 @@ class App extends React.Component {
   };
 
   componentDidMount() {
-    // axios.get("https://api.github.com/users/viewgo").then(response => {
-    //   this.setState({ users: [response.data] });
+    axios.get("https://api.github.com/users/viewgo").then(response => {
+      this.setState({ users: [response.data] });
 
-    //   axios.get("https://api.github.com/users/viewgo/followers").then(response => {
-    //     const followers = response.data;
+      axios.get("https://api.github.com/users/viewgo/followers").then(response => {
+        const followers = response.data;
 
-    //     followers.map(element => {
-    //       axios.get(`${element.url}`).then(response => {
-    //         const follower = response.data;
-    //         this.setState({ users: [...this.state.users, follower] });
-    //       });
-    //     });
-    //   });
-    // });
+        followers.map(element => {
+          axios.get(`${element.url}`).then(response => {
+            const follower = response.data;
+            this.setState({ users: [...this.state.users, follower] });
+          });
+        });
+      });
+    });
 
-    this.setState({users: data});
+    // this.setState({users: data});
 
     console.log(this.state.users);
   }
